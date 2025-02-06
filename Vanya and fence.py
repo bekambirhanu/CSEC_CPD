@@ -1,13 +1,13 @@
-n = input()
+n, h = list(map(int, input().split()))
 
-h = input()
+a = list(map(int, input().split()))
 
-a = input().split()
-result = 0
-for i in a:
-    if int(i) > int(h):
-        result += 2
+
+count = 0
+for person in a:
+    if person <= h:
+        count += 1
     else:
-        result += 1
-print(result)
-
+        count += 2
+        
+print(count)
